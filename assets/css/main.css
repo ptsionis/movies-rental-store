@@ -1,0 +1,9 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .page-wrapper {
+    @apply min-h-dvh p-12 flex flex-col justify-center items-center gap-y-12
+  }
+}
