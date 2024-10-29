@@ -10,7 +10,7 @@ const props = defineProps(['title', 'releaseYear', 'duration', 'rating', 'poster
       </h3>
     </template>
     <div class="flex flex-col justify-center items-center gap-y-4">
-      <img class="rounded-md" :src="props.posterUrl" :alt="`${props.title} poster`" width="65%">
+      <img class="rounded-md" :src="props.posterUrl ? props.posterUrl : '/images/img_poster_default.jpg'" onerror="this.onerror=null;this.src='/images/img_poster_default.jpg';" :alt="`${props.title} poster`" width="65%">
       <div class="flex justify-center items-center gap-x-4">
         <div class="flex justify-center items-center gap-x-1">
           <UIcon name="material-symbols:timelapse-rounded" class="w-5 h-5 text-green-400" />
