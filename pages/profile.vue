@@ -29,9 +29,9 @@ else {
     <SkeletonsProfile v-if="loading" />
     <div v-else class="flex flex-col justify-center items-center gap-y-4">
       <span>Name: {{ profile.first_name + profile.last_name }}</span>
-      <div class="flex justify-between items-center gap-x-4">
+      <div class="flex flex-col lg:flex-row justify-center lg:justify-between items-center gap-y-4 lg:gap-x-4">
         <span>Email: {{ profile.email }}</span>
-        <span>Wallet: {{ profile.wallet }}&euro;</span>
+        <Wallet :wallet="profile.wallet" />
       </div>
     </div>
     <RentalsTable :user="profile.email" />
