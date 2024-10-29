@@ -75,6 +75,7 @@ watch(page, () => {
 
 <template>
   <UTable
+    class="w-full"
     :columns="columns"
     :rows="rentals"
     :loading="loading"
